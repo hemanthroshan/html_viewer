@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iframes</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body> 
+        <center>       
+            <h2>HTML Viewer</h2>
+                <div style="display:flex;flex-direction: row;justify-content: center;">
+                    <div>                
+                        <input type="text" id="html_data" style="height:700px; width: 500px; border:2px black solid;" placeholder="Paste HTML here"/>
+                    </div> &nbsp &nbsp &nbsp &nbsp &nbsp 
+                    <div style="display:flex; align-items: center;">
+                        <button onclick="submitHandler()" style="background-color: #00c4a7;border-color: transparent;
+                        color: #fff;"><i class="fa-solid fa-play"></i></button>                        
+                    </div>&nbsp &nbsp &nbsp &nbsp &nbsp 
+                    <div>
+                        <iframe srcdoc="" style="height:700px; width: 500px; border:2px black solid" id="html_viewer"></iframe>
+                    </div>
+                </div> 
+        </center>                         
+    <script>
+    let submitHandler = () => {
+        let html_data = document.getElementById("html_data").value
+        document.getElementById("html_viewer").srcdoc = html_data;
+    }            
+    </script>      
+    </body>    
+</html>
